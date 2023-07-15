@@ -1,0 +1,51 @@
+error: version '0.0.0' matches '>=0.0', item should be removed
+ --> tests/ui/fail.rs:5:1
+  |
+5 | #[deprecate_until(remove = ">= 0.0")]
+  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |
+  = note: this error originates in the attribute macro `deprecate_until` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error: version '0.0.0' matches '>=0.0', item should be removed
+ --> tests/ui/fail.rs:8:1
+  |
+8 | #[deprecate_until(remove = ">= 0.0", note = "Remove me")]
+  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |
+  = note: this error originates in the attribute macro `deprecate_until` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error: version '0.0.0' matches '>=0.0', item should be removed
+  --> tests/ui/fail.rs:11:1
+   |
+11 | #[deprecate_until(remove = ">= 0.0", since = "0.0.0", note = "Remove me")]
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   |
+   = note: this error originates in the attribute macro `deprecate_until` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error: version 'x.1' cannot be parsed: Error("unexpected character after wildcard in version req")
+  --> tests/ui/fail.rs:14:1
+   |
+14 | #[deprecate_until(remove = "x.1")]
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   |
+   = note: this error originates in the attribute macro `deprecate_until` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error: mandatory 'remove' item missing
+  --> tests/ui/fail.rs:17:1
+   |
+17 | #[deprecate_until(note = "foo")]
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   |
+   = note: this error originates in the attribute macro `deprecate_until` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error: duplicate 'remove' items
+  --> tests/ui/fail.rs:20:35
+   |
+20 | #[deprecate_until(remove = "1.x", remove = "2.x")]
+   |                                   ^^^^^^
+
+error: unknown meta item 'bogus'
+  --> tests/ui/fail.rs:23:19
+   |
+23 | #[deprecate_until(bogus = "bar")]
+   |                   ^^^^^

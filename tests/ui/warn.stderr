@@ -1,0 +1,24 @@
+error: use of deprecated function `f1`: removal scheduled for version >= 1.0
+  --> tests/ui/warn.rs:15:5
+   |
+15 |     f1();
+   |     ^^
+   |
+note: the lint level is defined here
+  --> tests/ui/warn.rs:1:9
+   |
+1  | #![deny(warnings)]
+   |         ^^^^^^^^
+   = note: `#[deny(deprecated)]` implied by `#[deny(warnings)]`
+
+error: use of deprecated function `f2`: Remove me (removal scheduled for version >= 1.0)
+  --> tests/ui/warn.rs:16:5
+   |
+16 |     f2();
+   |     ^^
+
+error: use of deprecated function `f3`: Remove me (removal scheduled for version >= 1.0)
+  --> tests/ui/warn.rs:17:5
+   |
+17 |     f3();
+   |     ^^
