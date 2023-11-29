@@ -18,7 +18,7 @@ proc-macro = true
 proc-macro2 = { version = "1.0.70", default-features = false }
 quote = { version = "1.0.29", default-features = false }
 semver = { version = "1.0.20", default-features = false }
-syn = { version = "2.0.26", default-features = false, features = ["parsing", "proc-macro"] }
+syn = { version = "2.0.39", default-features = false, features = ["parsing", "proc-macro"] }
 
 [dev-dependencies]
 trybuild = "1.0.81"
