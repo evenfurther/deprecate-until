@@ -22,3 +22,6 @@ syn = { version = "2.0.26", default-features = false, features = ["parsing", "pr
 
 [dev-dependencies]
 trybuild = "1.0.81"
+
+[lints.clippy]
+pedantic = "deny"
