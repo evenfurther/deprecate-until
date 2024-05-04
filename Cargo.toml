@@ -21,7 +21,7 @@ semver = { version = "1.0.22", default-features = false }
 syn = { version = "2.0.60", default-features = false, features = ["parsing", "proc-macro"] }
 
 [dev-dependencies]
-trybuild = "1.0.91"
+trybuild = "1.0.92"
 
 [lints.clippy]
 pedantic = "deny"
