@@ -9,7 +9,7 @@ edition = "2021"
 license = "Apache-2.0/MIT"
 categories = ["development-tools"]
 readme = "README.md"
-rust-version = "1.60.0"
+rust-version = "1.70.0"
 
 [lib]
 proc-macro = true
