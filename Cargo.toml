@@ -14,6 +14,10 @@ rust-version = "1.70.0"
 [lib]
 proc-macro = true
 
+[features]
+# Feature to skip UI test output comparison (for non-nightly compilers)
+no_ui_output = []
+
 [dependencies]
 proc-macro2 = { version = "1.0.79", default-features = false }
 quote = { version = "1.0.34", default-features = false }

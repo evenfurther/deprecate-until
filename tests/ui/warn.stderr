@@ -7,7 +7,7 @@ error: use of deprecated function `f1`: removal scheduled for version >= 1.0
 note: the lint level is defined here
   --> tests/ui/warn.rs:1:9
    |
-1  | #![deny(warnings)]
+ 1 | #![deny(warnings)]
    |         ^^^^^^^^
    = note: `#[deny(deprecated)]` implied by `#[deny(warnings)]`
 
