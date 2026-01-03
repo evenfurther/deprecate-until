@@ -45,8 +45,12 @@ jobs:
       - uses: Swatinem/rust-cache@v2
       - name: Test documentation in debug mode
         run: cargo test --doc
-      - name: Test in debug mode
+      - name: Test in debug mode (nightly - with UI output checking)
+        if: matrix.toolchain == 'nightly'
         run: cargo test --tests --benches
+      - name: Test in debug mode (non-nightly - skip UI output checking)
+        if: matrix.toolchain != 'nightly'
+        run: cargo test --tests --benches --features no_ui_output
 
   test-release:
     name: Extra tests in release mode
